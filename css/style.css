@@ -1,0 +1,215 @@
+@import"https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap";
+
+body {
+  background: url(../images/bg1.png) left top, #fff;
+  background-size: 1040px auto;
+  animation: bgLoop 30s linear infinite;
+  font-family: "Zen Maru Gothic";
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin: 0;
+  padding: 0;
+  min-width: 340px;
+  overflow-x: auto; 
+}
+
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  z-index: 100;
+}
+
+.top-header img {
+  width: 200px;
+  height: auto;
+}
+
+h1.page-title {
+  font-family: "Rammetto One";
+  font-weight: 400;
+  font-size: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.wing-right {
+  transform: scaleX(-1);
+}
+
+.wing-left, .wing-right {
+  flex-shrink: 0;
+}
+
+@keyframes bgLoop {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1040px 625px;
+  }
+}
+
+.emoji-box {
+  display: inline-block;
+  vertical-align: bottom;
+  height: 3em;
+  width: auto;
+  overflow: hidden;
+}
+
+.emoji {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.text-box {
+  display: inline-block;
+  vertical-align: bottom;
+  position: static;
+}
+
+.greeting {
+  margin-bottom: 2rem;
+}
+
+#main {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 10vh;
+}
+
+.content-wrapper {
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.discord-widget {
+  display: flex;
+  justify-content: center;
+}
+
+.discord-widget iframe {
+  max-width: 100%;
+  width: 350px;
+  height: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 2.4rem;
+    background-size: 770px auto;
+  }
+  
+  .top-header {
+    padding: 15px 20px;
+  }
+  
+  .top-header img {
+    width: 150px;
+  }
+  
+  h1.page-title {
+    font-size: 2.4rem;
+    gap: 10px;
+  }
+  
+  .emoji-box {
+    height: 4em;
+  }
+
+  .text-box {
+font-size: 1.4em
+  }
+  
+  #main {
+    padding-top: 12vh;
+  }
+}
+
+.greeting .wing-left,
+.greeting .wing-right {
+  display: none;
+}
+
+.wing-left,
+.wing-right {
+  width: 1em;
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+
+  h1.page-title .wing-left,
+  h1.page-title .wing-right {
+    display: none;
+  }
+  .greeting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .greeting .wing-left,
+  .greeting .wing-right {
+    display: inline-block;
+  }
+  
+  .greeting .wing-right {
+    transform: scaleX(-1);
+  }
+
+  body {
+    font-size: 2rem;
+    background-size: 520px auto;
+  }
+  
+  .top-header {
+    padding: 10px 15px;
+  }
+  
+  .top-header img {
+    width: 120px;
+  }
+  
+  h1.page-title {
+    font-size: 1.8rem;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  h1.page-title svg {
+    width: 0.8em;
+  }
+  
+  .emoji-box {
+    height: 3em;
+  }
+  
+  .discord-widget iframe {
+    width: 80%;
+    height: 10em;
+  }
+  
+  #main {
+    padding-top: 80px;
+  }
+  
+  .content-wrapper {
+    padding: 0 15px;
+  }
+
+}
