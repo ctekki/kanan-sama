@@ -65,13 +65,17 @@
       <iframe src="https://discord.com/widget?id=1428142080282067064&theme=dark" width="350" height="350" allowtransparency="false" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
 <div class="server-description">
-	Here you may discuss Nonco-san's works, upload emojis and share cute animals!<br>
-<small>Unofficial fan server • Not affiliated with the series</small>
+	Here you may discuss Nonco-san's works, upload emojis and share cute animals!
 </div>
+    <footer class="site-footer">
+      <p>• Unofficial server •</p>
+    </footer>
   </div>
 </div>
 <script>
-window.addEventListener('scroll', function() {
+let lastWidth = window.innerWidth;
+
+function updateFade() {
   const header = document.querySelector('.top-header');
   const rightLinks = document.querySelector('.top-right-links');
 
@@ -103,7 +107,9 @@ window.addEventListener('scroll', function() {
   } else {
     rightLinks.style.pointerEvents = 'auto';
   }
-});
-</script>
-</body>
+}
+
+window.addEventListener('scroll', updateFade);
+window.addEventListener('resize', updateFade);
+</script></body>
 </html>

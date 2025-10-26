@@ -40,6 +40,8 @@ h1.page-title {
   gap: 15px;
   justify-content: center;
   margin-bottom: 0.8rem;
+  margin-top: 0.7em;
+
 }
 
 .wing-right {
@@ -173,6 +175,29 @@ h1.page-title {
   border-color: #5f04db;
 }
 
+.site-footer {
+  font-family: "Dongle";
+  font-size: 0.8em;
+  opacity: 0.7;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid rgba(219, 5, 124, 0.2);
+}
+
+.site-footer p {
+  margin: 0.3em 0;
+}
+
+.site-footer a {
+  color: #db057c;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #5f04db;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 1580px) {
   .top-header {
     left: calc((100vw - 1580px) / 2);
@@ -200,7 +225,7 @@ h1.page-title {
   h1.page-title {
     font-size: 2.4rem;
     gap: 10px;
-    margin-top: 0.4rem; 
+    margin-top: 0;
   }
   
   .emoji-box {
@@ -300,9 +325,13 @@ h1.page-title {
     gap: 8px;
   }
   
-  .circle-link {
+  .circle-link > img {
     width: 40px;
     height: 40px;
+  }
+  
+  .circle-link .link-label {
+    font-size: 0.9rem;
   }
 
 }
