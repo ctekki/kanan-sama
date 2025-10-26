@@ -7,12 +7,20 @@
 <link rel="canonical" href="https://kanan-sama-discord/">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
 <title>Kanan-sama discord server</title>
+</head>
 <body>
 <header class="top-header">
   <a href="./"><img src="images/logo.png" alt="Kanan-sama"></a>
 </header>
+<div class="top-right-links">
+  <a href="https://x.com/nonco331" target="_blank" rel="noopener noreferrer" class="circle-link">
+    <img src="images/nonco331.jpg" alt="Follow the author on twitter">
+  </a>
+  <a href="https://x.com/Kanan_Choroi" target="_blank" rel="noopener noreferrer" class="circle-link">
+    <img src="images/kanan_choroi.jpg" alt="Follow the official series account on twitter">
+  </a>
+</div>
 
 <div id="main">
   <div class="content-wrapper">
@@ -46,7 +54,45 @@
     <div class="discord-widget">
       <iframe src="https://discord.com/widget?id=1428142080282067064&theme=dark" width="350" height="350" allowtransparency="false" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
+<div class="server-description">
+	Here you may discuss Nonco-san's works, upload emojis and share cute animals!
+</div>
   </div>
 </div>
+<script>
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.top-header');
+  const rightLinks = document.querySelector('.top-right-links');
+
+  if (window.innerWidth >= 1340) {
+    header.style.opacity = '1';
+    rightLinks.style.opacity = '1';
+    rightLinks.style.pointerEvents = 'auto';
+    return;
+  }
+  
+  const scrolled = window.scrollY;
+  const fadeStart = 20;
+  const fadeEnd = 90;
+  
+  let opacity;
+  if (scrolled <= fadeStart) {
+    opacity = 1;
+  } else if (scrolled >= fadeEnd) {
+    opacity = 0;
+  } else {
+    opacity = 1 - (scrolled - fadeStart) / (fadeEnd - fadeStart);
+  }
+  
+  header.style.opacity = opacity;
+  rightLinks.style.opacity = opacity;
+
+  if (opacity < 0.3) {
+    rightLinks.style.pointerEvents = 'none';
+  } else {
+    rightLinks.style.pointerEvents = 'auto';
+  }
+});
+</script>
 </body>
 </html>
